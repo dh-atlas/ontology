@@ -1,0 +1,8 @@
+Properties,description,expected Type,range Restriction,cardinality,ATLAS,RO-Crate,KNOT,OpenAIRE Graph,OpenAIRE Application Profile,SKG IF,IRIS
+M = Mandatory,,,,,https://schema.org/Organization,https://schema.org/Organization,/,Research product,/,Organisation (M),/
+,,,,,URI,id,/,id,/,local_identifier (M),/
+Name (M),The name of the Organization.,xsd:String,,1,https://schema.org/name,https://schema.org/name,/,legalShortName ; legalName ; alternativeNames,/,name ; short_name ; other_names,/
+Identifier,The list of persistent identifiers for the Organization.,URL,Research Organization Register,0-n,https://schema.org/identifier,https://schema.org/identifier,/,pid,/,identifiers,/
+Location (M),The location where the Organization is located.,URI,Geonames,1-n,https://schema.org/location,/,/,country,/,country,/
+Other identifier,A Reference Entity that unambiguously indicates the Organization's identity.,URI,Wikidata; VIAF,0-n,https://schema.org/sameAs,/,/,/,/,affiliations,/
+Landing Page,The website where the Organization is presented.,URL,,0-1,https://schema.org/url,/,/,websiteUrl,/,website,/

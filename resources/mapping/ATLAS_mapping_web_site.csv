@@ -1,0 +1,9 @@
+Properties,description,expected Type,range Restriction,cardinality,ATLAS,RO-Crate,KNOT,OpenAIRE,IRIS
+M = Mandatory,,,,,fabio:WebSite,/,http://www.w3.org/ns/dcat#DataService',/,/
+,,,,,URI,/,URI,/,/
+Title (M),The title of the website.,xsd:String,,1-n,https://schema.org/name,/,http://purl.org/dc/terms/title,/,/
+Description,A summary of what the website allows users to do.,xsd:String,,1-n,https://schema.org/description,/,http://purl.org/dc/terms/description,/,/
+Access URL (M),The URL of the website.,URL,,1,http://schema.org/url,/,http://www.w3.org/ns/dcat#endpointURL,/,/
+Documentation,The URL of a document describing the website and the operations available with respect to the dataset.,URL,,1-n,https://schema.org/usageInfo,/,http://www.w3.org/ns/dcat#endpointDescription,/,/
+Research Activities ,The type of research activities afforded by the website with respect to the dataset.,URI,TaDiRAH,0-n,https://schema.org/educationalUse,/,http://www.w3.org/ns/dcat#theme,/,/
+Based On,Software component that is reused/extended in the current website. It can be a research product or the URL of the official page of the software.,URI,atlas:Software; URL,0-n,https://schema.org/isBasedOn,/,/,/,/

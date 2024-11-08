@@ -1,0 +1,7 @@
+Properties,description,expected Type,range Restriction,cardinality,ATLAS,RO-Crate,KNOT,OpenAIRE Graph,OpenAIRE Application Profile,SKG IF,IRIS
+M = Mandatory,,,,,https://schema.org/Person,https://schema.org/Person,/,/,/,Person (M),/
+,,,,,URI,orcid URI,/,/,/,local_identifier (M),/
+Full name (M),The name of the Person.,xsd:String,,1,https://schema.org/name,https://schema.org/name,/,/,/,given_name ; family_name ; full_name,/
+Identifier,The ORCiD identifier of the Person.,URL,,0-1,https://schema.org/identifier,/,/,/,/,identifiers,/
+Affiliation,An organization that this person is affiliated with. For example; a school/university.,URI,schema:Organization,0-n,https://schema.org/affiliation,https://schema.org/affiliation,/,/,/,affiliations,/
+Other identifier,A Reference Entity that unambiguously indicates the Person's identity,URI,Wikidata; VIAF,0-n,https://schema.org/sameAs,/,/,/,/,/,/

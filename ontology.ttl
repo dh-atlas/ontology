@@ -1,0 +1,648 @@
+@prefix : <http://www.w3id.org/dh-atlas/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3id.org/dh-atlas/> .
+
+<http://www.w3id.org/dh-atlas/> rdf:type owl:Ontology ;
+                                 owl:versionIRI <http://www.w3id.org/dh-atlas/> ;
+                                 <http://purl.org/dc/elements/1.1/contributor> "Alessia Bardi" ,
+                                                                               "Angelo Mario Del Grosso" ,
+                                                                               "Chiara Martignano" ,
+                                                                               "Franz Fischer" ,
+                                                                               "Giorgia Rubin" ,
+                                                                               "Marina Buzzoni" ,
+                                                                               "Riccardo Del Gratta" ,
+                                                                               "Roberto Rosselli Del Turco" ;
+                                 <http://purl.org/dc/elements/1.1/created> "2024-10-15"^^xsd:date ;
+                                 <http://purl.org/dc/elements/1.1/creator> "Francesca Tomasi" ,
+                                                                           "Marilena Daquino" ,
+                                                                           "Sebastiano Giacomini" ;
+                                 <http://purl.org/dc/elements/1.1/description> """The ATLAS Ontology is an OWL 2 DL ontology, designed to effectively represent scholarly research projects and their outcomes within the Cultural Heritage domain. In particular, it focuses on highlighting the key characteristics of significant types of research products (Text Collection, Digital Scholarly Edition, Linked Open Data, Ontology, and Software), while considering their unique attributes and specifications. In so doing, it seeks to realise the potential of sharing protocols, good practices, guidelines and evaluation frameworks in the humanities.
+
+The ATLAS Ontology integrates existing and complementary ontological entities from three main standards—Schema.org, DCTerms, and FaBiO (the FRBR-aligned Bibliographic Ontology)—and introduces new ATLAS Classes and Properties to enhance granularity and specificity, thereby facilitating coherent connections between Classes across different vocabularies."""@en ;
+                                 <http://purl.org/dc/elements/1.1/rights> <https://w3id.org/italia/controlled-vocabulary/licences/B11_CCBYNC40> ;
+                                 rdfs:label "The ATLAS Ontology" ;
+                                 owl:versionInfo 1.0 .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/abstract
+<http://purl.org/dc/elements/1.1/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/created
+<http://purl.org/dc/elements/1.1/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/rights
+<http://purl.org/dc/elements/1.1/rights> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/dc/terms/conformsTo
+<http://purl.org/dc/terms/conformsTo> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain <http://schema.org/Dataset> ;
+                                      rdfs:comment "A recognized standard that the described Dataset adheres to."@en ;
+                                      rdfs:label "conforms to"@en .
+
+
+###  http://purl.org/dc/terms/references
+<http://purl.org/dc/terms/references> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain :DigitalScholarlyEdition ,
+                                                  :LinkedOpenData ,
+                                                  :Ontology ,
+                                                  :TextCollection ;
+                                      rdfs:comment "A related resource that is referenced, cited, or otherwise pointed to by the described resource."@en ;
+                                      rdfs:label "references"@en .
+
+
+###  http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> rdf:type owl:ObjectProperty ;
+                                  rdfs:domain :DigitalScholarlyEdition ,
+                                              :TextCollection ;
+                                  rdfs:comment "A related resource from which one or more resources in the Dataset are derived or originated."@en ;
+                                  rdfs:label "source"@en .
+
+
+###  http://purl.org/dc/terms/type
+<http://purl.org/dc/terms/type> rdf:type owl:ObjectProperty ;
+                                rdfs:comment "The genre of the resource."@en ;
+                                rdfs:label "type"@en .
+
+
+###  http://schema.org/about
+<http://schema.org/about> rdf:type owl:ObjectProperty ;
+                          rdfs:range <http://schema.org/Dataset> ;
+                          rdfs:comment "The subject matter of the Dataset's content."@en ;
+                          rdfs:label "about"@en .
+
+
+###  http://schema.org/additionalType
+<http://schema.org/additionalType> rdf:type owl:ObjectProperty ;
+                                   rdfs:domain <http://schema.org/Dataset> ;
+                                   rdfs:comment "An additional type for the item, typically used for adding more specific types from a list of defined terms or external vocabularies. This is a relationship between a resource and a class that the resource is in."@en ;
+                                   rdfs:label "additional type"@en .
+
+
+###  http://schema.org/conditionsOfAccess
+<http://schema.org/conditionsOfAccess> rdf:type owl:ObjectProperty ;
+                                       rdfs:domain <http://schema.org/Dataset> ;
+                                       rdfs:comment "Information about the right or mode the Dataset's content can be accessed. Values from external vocabularies and defined terms should be preferred."@en ;
+                                       rdfs:label "conditions of access"@en .
+
+
+###  http://schema.org/contributor
+<http://schema.org/contributor> rdf:type owl:ObjectProperty ;
+                                rdfs:domain <http://schema.org/Dataset> ;
+                                rdfs:range <http://xmlns.com/foaf/0.1/Agent> ;
+                                rdfs:comment "A secondary contributor involved in the creation of the Dataset."@en ;
+                                rdfs:label "contributor"@en .
+
+
+###  http://schema.org/creativeWorkStatus
+<http://schema.org/creativeWorkStatus> rdf:type owl:ObjectProperty ;
+                                       rdfs:domain <http://schema.org/Dataset> ;
+                                       rdfs:comment "The status of a Dataset in terms of its stage in a lifecycle. Values from external vocabularies and defined terms should be preferred."@en ;
+                                       rdfs:label "creative work status"@en .
+
+
+###  http://schema.org/creator
+<http://schema.org/creator> rdf:type owl:ObjectProperty ;
+                            rdfs:domain <http://schema.org/Dataset> ;
+                            rdfs:range <http://xmlns.com/foaf/0.1/Agent> ;
+                            rdfs:comment "The main creator involved in the creation of the Dataset."@en ;
+                            rdfs:label "creator"@en .
+
+
+###  http://schema.org/educationalUse
+<http://schema.org/educationalUse> rdf:type owl:ObjectProperty ;
+                                   rdfs:domain <http://purl.org/spar/fabio/ComputerProgram> ,
+                                               <http://purl.org/spar/fabio/WebSite> ,
+                                               <http://schema.org/Dataset> ;
+                                   rdfs:comment "The educational/research purpose of a resource. Values from external vocabularies and defined terms should be preferred."@en ;
+                                   rdfs:label "educational use"@en .
+
+
+###  http://schema.org/encodingFormat
+<http://schema.org/encodingFormat> rdf:type owl:ObjectProperty ;
+                                   rdfs:comment "The encoding format in which the Dataset is released."@en ;
+                                   rdfs:label "encoding format"@en .
+
+
+###  http://schema.org/funder
+<http://schema.org/funder> rdf:type owl:ObjectProperty ;
+                           rdfs:domain <http://schema.org/ResearchProject> ;
+                           rdfs:range <http://xmlns.com/foaf/0.1/Agent> ;
+                           rdfs:comment "An Agent that supports (sponsors) a Research Project through some kind of financial contribution."@en ;
+                           rdfs:label "funder"@en .
+
+
+###  http://schema.org/genre
+<http://schema.org/genre> rdf:type owl:ObjectProperty ;
+                          rdfs:domain :DigitalScholarlyEdition ,
+                                      :TextCollection ;
+                          rdfs:comment "A literary category used to define the type of (a collection of) literary works, characterized by specific stylistic, thematic, or formal elements."@en ;
+                          rdfs:label "genre"@en .
+
+
+###  http://schema.org/hasPart
+<http://schema.org/hasPart> rdf:type owl:ObjectProperty ;
+                            owl:inverseOf <http://schema.org/isPartOf> ;
+                            rdfs:domain <http://schema.org/Dataset> ;
+                            rdfs:range <http://schema.org/Dataset> ;
+                            rdfs:comment "Indicates a Dataset that is part of this Dataset, in some sense."@en ;
+                            rdfs:label "has part"@en .
+
+
+###  http://schema.org/inLanguage
+<http://schema.org/inLanguage> rdf:type owl:ObjectProperty ;
+                               rdfs:comment "The language(s) used in/by the research product."@en ;
+                               rdfs:label "in language"@en .
+
+
+###  http://schema.org/isBasedOn
+<http://schema.org/isBasedOn> rdf:type owl:ObjectProperty ;
+                              rdfs:domain <http://purl.org/spar/fabio/ComputerProgram> ,
+                                          <http://purl.org/spar/fabio/WebSite> ,
+                                          <http://schema.org/Dataset> ;
+                              rdfs:comment "A resource from which this resource is derived or from which it is a modification or adaptation."@en ;
+                              rdfs:label "is based on"@en .
+
+
+###  http://schema.org/isPartOf
+<http://schema.org/isPartOf> rdf:type owl:ObjectProperty ;
+                             rdfs:comment "Indicates a Dataset that this Dataset is part of, in some sense."@en ;
+                             rdfs:label "is part of"@en .
+
+
+###  http://schema.org/license
+<http://schema.org/license> rdf:type owl:ObjectProperty ;
+                            rdfs:domain <http://schema.org/Dataset> ;
+                            rdfs:comment "A document containing details about license rights held in and over the Dataset."@en ;
+                            rdfs:label "license"@en .
+
+
+###  http://schema.org/location
+<http://schema.org/location> rdf:type owl:ObjectProperty ;
+                             rdfs:domain <http://schema.org/Organization> ;
+                             rdfs:comment "The location where the Research project (or its Organizations) is located."@en ;
+                             rdfs:label "location"@en .
+
+
+###  http://schema.org/member
+<http://schema.org/member> rdf:type owl:ObjectProperty ;
+                           rdfs:domain <http://schema.org/Organization> ;
+                           rdfs:range <http://xmlns.com/foaf/0.1/Agent> ;
+                           rdfs:comment "An Agent member of an Organization."@en ;
+                           rdfs:label "member"@en .
+
+
+###  http://schema.org/producer
+<http://schema.org/producer> rdf:type owl:ObjectProperty ;
+                             rdfs:domain <http://schema.org/Dataset> ;
+                             rdfs:range <http://schema.org/ResearchProject> ;
+                             rdfs:comment "The Research Project responsible for generating the Dataset."@en ;
+                             rdfs:label "producer"@en .
+
+
+###  http://schema.org/publisher
+<http://schema.org/publisher> rdf:type owl:ObjectProperty ;
+                              rdfs:domain <http://schema.org/Dataset> ;
+                              rdfs:range <http://xmlns.com/foaf/0.1/Agent> ;
+                              rdfs:comment "The Agent responsible for publishing the Dataset."@en ;
+                              rdfs:label "publisher"@en .
+
+
+###  http://www.ebi.ac.uk/swo/SWO_0000086
+<http://www.ebi.ac.uk/swo/SWO_0000086> rdf:type owl:ObjectProperty ;
+                                       rdfs:domain :Software ;
+                                       rdfs:comment "Specifies the file format(s) that the software accepts as input. Usage Note: The format should be described using a MIME type or a standardized file extension."@en ;
+                                       rdfs:label "has specified data input"@en .
+
+
+###  http://www.ebi.ac.uk/swo/SWO_0000087
+<http://www.ebi.ac.uk/swo/SWO_0000087> rdf:type owl:ObjectProperty ;
+                                       rdfs:domain :Software ;
+                                       rdfs:comment "Specifies the file format(s) that the software produces as output. Usage Note: The format should be described using a MIME type or a standardized file extension." ;
+                                       rdfs:label "has specified data output"@en .
+
+
+###  http://www.ebi.ac.uk/swo/SWO_0000741
+<http://www.ebi.ac.uk/swo/SWO_0000741> rdf:type owl:ObjectProperty ;
+                                       rdfs:domain <http://purl.org/spar/fabio/ComputerProgram> ;
+                                       rdfs:comment "A programming language in which source code of a Computer Program is written"@en ;
+                                       rdfs:label "is encoded in"@en .
+
+
+###  http://www.w3id.org/dh-atlas/editionType
+:editionType rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf <http://purl.org/dc/terms/type> ;
+             rdfs:domain :DigitalScholarlyEdition ;
+             rdfs:comment "The type of edition that reflects how the editorial team has worked on the text and outlines the main objectives of the Digital Scholarly Edition. Usage Note: values from external vocabularies or defined terms should be preferred."@en ;
+             rdfs:label "edition type"@en .
+
+
+###  http://www.w3id.org/dh-atlas/methodology
+:methodology rdf:type owl:ObjectProperty ;
+             rdfs:domain <http://schema.org/Dataset> ;
+             rdfs:comment "Research activities performed to realize the research product. Usage Note: values from external vocabularies and defined terms should be preferred."@en ;
+             rdfs:label "methodology"@en .
+
+
+###  http://www.w3id.org/dh-atlas/referencedAuthor
+:referencedAuthor rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf <http://schema.org/contributor> ;
+                  rdfs:domain :DigitalScholarlyEdition ,
+                              :TextCollection ;
+                  rdfs:range <http://xmlns.com/foaf/0.1/Agent> ;
+                  rdfs:comment "The main author(s) of the edited text(s) ."@en ;
+                  rdfs:label "referenced author"@en .
+
+
+###  http://www.w3id.org/dh-atlas/referencedWorkType
+:referencedWorkType rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf <http://purl.org/dc/terms/type> ;
+                    rdfs:domain :DigitalScholarlyEdition ,
+                                :TextCollection ;
+                    rdfs:comment "The category or categories of the edited text(s). Usage Note: values from external vocabularies and defined terms should be preferred."@en ;
+                    rdfs:label "referenced work type"@en .
+
+
+###  http://www.w3id.org/dh-atlas/servedBy
+:servedBy rdf:type owl:ObjectProperty ;
+          rdfs:domain <http://schema.org/Dataset> ;
+          rdfs:range <http://purl.org/spar/fabio/ComputerProgram> ,
+                     <http://purl.org/spar/fabio/WebSite> ;
+          rdfs:comment "A data service (API, endpoint), software, or website that provides access to the Dataset."@en ;
+          rdfs:label "served by"@en .
+
+
+###  http://www.w3id.org/dh-atlas/used
+:used rdf:type owl:ObjectProperty ;
+      rdfs:domain <http://schema.org/Dataset> ;
+      rdfs:range <http://purl.org/spar/fabio/ComputerProgram> ,
+                 <http://schema.org/Dataset> ;
+      rdfs:comment "A Dataset or software component that is partially or fully utilized in the creation or realization of the described Dataset."@en ;
+      rdfs:label "used"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:domain :Ontology ;
+                                                      rdfs:label "preferred namespace prefix"@en .
+
+
+###  http://schema.org/archivedAt
+<http://schema.org/archivedAt> rdf:type owl:DatatypeProperty ;
+                               rdfs:domain :Software ;
+                               rdfs:range xsd:anyURI ;
+                               rdfs:comment "Indicates a Web page or other link where a resource is archived."@en ;
+                               rdfs:label "archived at"@en .
+
+
+###  http://schema.org/citation
+<http://schema.org/citation> rdf:type owl:DatatypeProperty ;
+                             rdfs:domain <http://schema.org/Dataset> ;
+                             rdfs:range xsd:anyURI ;
+                             rdfs:comment "A reference to another creative work, such as another publication, web page, scholarly article, etc."@en ;
+                             rdfs:label "citation"@en .
+
+
+###  http://schema.org/datePublished
+<http://schema.org/datePublished> rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain <http://schema.org/Dataset> ;
+                                  rdfs:range xsd:date ;
+                                  rdfs:comment "Date of first publication of a Dataset."@en ;
+                                  rdfs:label "date published"@en .
+
+
+###  http://schema.org/dissolutionDate
+<http://schema.org/dissolutionDate> rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain <http://schema.org/ResearchProject> ;
+                                    rdfs:range xsd:date ;
+                                    rdfs:comment "The end date of a Research Project's activity."@en ;
+                                    rdfs:label "dissolution date"@en .
+
+
+###  http://schema.org/distribution
+<http://schema.org/distribution> rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain <http://schema.org/Dataset> ;
+                                 rdfs:range xsd:anyURI ;
+                                 rdfs:comment "A URL of a downloadable form of a dataset, at a specific location, in a specific format. Usage Note: If a dataset is available for download only through a webpage that requires following certain links, providing information, or checking some boxes, the URL of this page must be indicated, even if it matches the value of schema:url"@en ;
+                                 rdfs:label "distribution"@en .
+
+
+###  http://schema.org/foundingDate
+<http://schema.org/foundingDate> rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain <http://schema.org/ResearchProject> ;
+                                 rdfs:range xsd:date ;
+                                 rdfs:comment "The start date of a Research Project's activity."@en ;
+                                 rdfs:label "founding date"@en .
+
+
+###  http://schema.org/identifier
+<http://schema.org/identifier> rdf:type owl:DatatypeProperty ;
+                               rdfs:domain <http://schema.org/Dataset> ,
+                                           <http://xmlns.com/foaf/0.1/Agent> ;
+                               rdfs:comment "An unambiguous reference assigned to the resource being registered. This can be any alphanumeric string conforming to a recognized identification system (e.g., ORCiD, DOI, ISBN, ISSN, etc.)"@en ;
+                               rdfs:label "identifier"@en .
+
+
+###  http://schema.org/name
+<http://schema.org/name> rdf:type owl:DatatypeProperty ;
+                         rdfs:comment "A name given to an entity."@en ;
+                         rdfs:label "name"@en .
+
+
+###  http://schema.org/size
+<http://schema.org/size> rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :TextCollection ;
+                         rdfs:comment "A quantitative description of a text collection, such as the number of texts included."@en ;
+                         rdfs:label "size"@en .
+
+
+###  http://schema.org/url
+<http://schema.org/url> rdf:type owl:DatatypeProperty ;
+                        rdfs:domain <http://purl.org/spar/fabio/ComputerProgram> ,
+                                    <http://purl.org/spar/fabio/WebSite> ,
+                                    <http://schema.org/Dataset> ,
+                                    <http://schema.org/Organization> ;
+                        rdfs:range xsd:anyURI ;
+                        rdfs:comment "The URL of a Web page accessible via a Web browser, leading to the landing page of a Dataset or displaying the Dataset's content and/or information."@en ;
+                        rdfs:label "url"@en .
+
+
+###  http://schema.org/usageInfo
+<http://schema.org/usageInfo> rdf:type owl:DatatypeProperty ;
+                              rdfs:domain <http://purl.org/spar/fabio/ComputerProgram> ,
+                                          <http://purl.org/spar/fabio/WebSite> ,
+                                          <http://schema.org/Dataset> ;
+                              rdfs:comment "The URL of a Web page that contains the documentation for the resource."@en ;
+                              rdfs:label "usage info"@en .
+
+
+###  http://schema.org/version
+<http://schema.org/version> rdf:type owl:DatatypeProperty ;
+                            rdfs:domain <http://schema.org/Dataset> ;
+                            rdfs:comment "The current version of an item."@en ;
+                            rdfs:label "version"@en .
+
+
+###  http://www.w3id.org/dh-atlas/description
+:description rdf:type owl:DatatypeProperty ;
+             rdfs:domain <http://purl.org/spar/fabio/WebSite> ,
+                         <http://schema.org/Dataset> ,
+                         <http://schema.org/ResearchProject> ;
+             rdfs:comment "A description of an entity."@en ;
+             rdfs:label "description"@en .
+
+
+###  http://www.w3id.org/dh-atlas/notesOnSource
+:notesOnSource rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :description ;
+               rdfs:domain :DigitalScholarlyEdition ,
+                           :TextCollection ;
+               rdfs:comment "Additional information or comments on the source(s) used to produce the Dataset. Notes may include details on the type of sources and their use."@en ;
+               rdfs:label "notes on source"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/spar/fabio/Anthology
+<http://purl.org/spar/fabio/Anthology> rdf:type owl:Class .
+
+
+###  http://purl.org/spar/fabio/ComputerProgram
+<http://purl.org/spar/fabio/ComputerProgram> rdf:type owl:Class .
+
+
+###  http://purl.org/spar/fabio/DataFile
+<http://purl.org/spar/fabio/DataFile> rdf:type owl:Class .
+
+
+###  http://purl.org/spar/fabio/MetadataDocument
+<http://purl.org/spar/fabio/MetadataDocument> rdf:type owl:Class .
+
+
+###  http://purl.org/spar/fabio/OntologyDocument
+<http://purl.org/spar/fabio/OntologyDocument> rdf:type owl:Class .
+
+
+###  http://purl.org/spar/fabio/WebSite
+<http://purl.org/spar/fabio/WebSite> rdf:type owl:Class ;
+                                     rdfs:comment "A collection of related web pages containing text, images, videos and/or other digital assets that are addressed relative to a common Uniform Resource Locator (URL). A web site is hosted on at least one web server, accessible via a network such as the Internet or a private local area network (FaBiO)"@en ;
+                                     rdfs:label "Web Site"@en .
+
+
+###  http://schema.org/Dataset
+<http://schema.org/Dataset> rdf:type owl:Class ;
+                            rdfs:comment "A collection of data, published or curated by a single agent, describing some topic(s) of interest."@en ;
+                            rdfs:label "Dataset"@en .
+
+
+###  http://schema.org/Organization
+<http://schema.org/Organization> rdf:type owl:Class ;
+                                 rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
+                                 rdfs:label "Organization"@en .
+
+
+###  http://schema.org/Person
+<http://schema.org/Person> rdf:type owl:Class ;
+                           rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
+                           rdfs:label "Person"@en .
+
+
+###  http://schema.org/ResearchProject
+<http://schema.org/ResearchProject> rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://schema.org/Organization> ;
+                                    rdfs:comment "A Research group undertaking some activities that lead to the creation of a Research product."@en ;
+                                    rdfs:label "Research Project"@en .
+
+
+###  http://www.w3id.org/dh-atlas/DigitalScholarlyEdition
+:DigitalScholarlyEdition rdf:type owl:Class ;
+                         rdfs:subClassOf <http://purl.org/spar/fabio/MetadataDocument> ,
+                                         <http://schema.org/Dataset> ;
+                         rdfs:comment "An information resource which offers a critical representation of (normally) historical documents or texts following a methodology determined by a digital paradigm."@en ;
+                         rdfs:label "Digital Scholarly Edition"@en .
+
+
+###  http://www.w3id.org/dh-atlas/LinkedOpenData
+:LinkedOpenData rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.org/spar/fabio/DataFile> ,
+                                <http://schema.org/Dataset> ;
+                rdfs:label "Linked Open Data"@en .
+
+
+###  http://www.w3id.org/dh-atlas/Ontology
+:Ontology rdf:type owl:Class ;
+          rdfs:subClassOf <http://purl.org/spar/fabio/OntologyDocument> ,
+                          <http://schema.org/Dataset> ;
+          rdfs:label "Ontology"@en .
+
+
+###  http://www.w3id.org/dh-atlas/Software
+:Software rdf:type owl:Class ;
+          rdfs:subClassOf <http://purl.org/spar/fabio/ComputerProgram> ,
+                          <http://schema.org/Dataset> ;
+          rdfs:label "Software"@en .
+
+
+###  http://www.w3id.org/dh-atlas/TextCollection
+:TextCollection rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.org/spar/fabio/Anthology> ,
+                                <http://schema.org/Dataset> ;
+                rdfs:label "Text Collection"@en .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.w3id.org/dh-atlas/BestManuscriptEdition
+:BestManuscriptEdition rdf:type owl:NamedIndividual ;
+                       rdfs:comment "An edition based on the supposedly best manuscript, typically the earliest and/or best preserved manuscript in the tradition (Parvum lexicon stemmatologicum)."@en ;
+                       rdfs:label "Best-manuscript edition"@en .
+
+
+###  http://www.w3id.org/dh-atlas/Chapter
+:Chapter rdf:type owl:NamedIndividual ;
+         rdfs:comment "Medieval and early modern deed, including cartularies (Catalog of Digital Scholarly Editions, Patrick Sahle et al.)."@en ;
+         rdfs:label "Chapter"@en .
+
+
+###  http://www.w3id.org/dh-atlas/CollectedWorks
+:CollectedWorks rdf:type owl:NamedIndividual ;
+                rdfs:comment "All works by a specific author (Catalog of Digital Scholarly Editions, Patrick Sahle et al.)."@en ;
+                rdfs:label "Collected works"@en .
+
+
+###  http://www.w3id.org/dh-atlas/CollectionOfTexts
+:CollectionOfTexts rdf:type owl:NamedIndividual ;
+                   rdfs:comment "Different texts by different authors (Catalog of Digital Scholarly Editions, Patrick Sahle et al.)."@en ;
+                   rdfs:label "Collection of texts"@en .
+
+
+###  http://www.w3id.org/dh-atlas/CriticalEdition
+:CriticalEdition rdf:type owl:NamedIndividual ;
+                 rdfs:comment "An edition in which the text has been constituted on the basis of more than one source according to the genealogical principle. It is based on a strict recension of the manuscript sources and the attempt to edit the archetypal text, and it is thus closely associated with the Lachmannian tradition of textual editing (Parvum lexicon stemmatologicum)."@en ;
+                 rdfs:label "Critical edition"@en .
+
+
+###  http://www.w3id.org/dh-atlas/Diary
+:Diary rdf:type owl:NamedIndividual ;
+       rdfs:comment "A a personal, chronological record of thoughts (Catalog of Digital Scholarly Editions, Patrick Sahle et al.)."@en ;
+       rdfs:label "Diary"@en .
+
+
+###  http://www.w3id.org/dh-atlas/DigitalEdition
+:DigitalEdition rdf:type owl:NamedIndividual ;
+                rdfs:comment "A dynamic edition that fully leverages the capabilities of the digital medium. It should not be confused with a digitized edition, which refers the conversion of a printed edition into an electronic format (Parvum lexicon stemmatologicum)."@en ;
+                rdfs:label "Digital edition"@en .
+
+
+###  http://www.w3id.org/dh-atlas/DiplomaticEdition
+:DiplomaticEdition rdf:type owl:NamedIndividual ;
+                   rdfs:comment "An edition which is based on a single manuscript and usually follows it very closely in matters of orthography, so that it is suited for e.g. linguistic studies. In many cases, obvious mistakes are not corrected, but perhaps only pointed out in the apparatus (Parvum lexicon stemmatologicum)."@en ;
+                   rdfs:label "Diplomatic edition"@en .
+
+
+###  http://www.w3id.org/dh-atlas/DocumentaryEdition
+:DocumentaryEdition rdf:type owl:NamedIndividual ;
+                    rdfs:comment "An edition based on a single manuscript, often the supposedly best manuscript, but in some cases also a manuscript of particular literary or linguistic value. It may regularize the orthography of the source (Parvum lexicon stemmatologicum)."@en ;
+                    rdfs:label "Documentary edition"@en .
+
+
+###  http://www.w3id.org/dh-atlas/EclecticEdition
+:EclecticEdition rdf:type owl:NamedIndividual ;
+                 rdfs:comment "An edition which is based on more than one manuscript and tries to approximate an earlier stage of the textual transmission by selecting readings from several manuscripts (Parvum lexicon stemmatologicum)."@en ;
+                 rdfs:label "Eclectic edition"@en .
+
+
+###  http://www.w3id.org/dh-atlas/Inscription
+:Inscription rdf:type owl:NamedIndividual ;
+             rdfs:comment "Epigraphic document (Catalog of Digital Scholarly Editions, Patrick Sahle et al.)."@en ;
+             rdfs:label "Inscription"@en .
+
+
+###  http://www.w3id.org/dh-atlas/Letter
+:Letter rdf:type owl:NamedIndividual ;
+        rdfs:comment "A correspondence document (Catalog of Digital Scholarly Editions, Patrick Sahle et al.)."@en ;
+        rdfs:label "Letter"@en .
+
+
+###  http://www.w3id.org/dh-atlas/MonotypicEdition
+:MonotypicEdition rdf:type owl:NamedIndividual ;
+                  rdfs:comment "An edition based on a single manuscript (Parvum lexicon stemmatologicum)."@en ;
+                  rdfs:label "Monotypic edition"@en .
+
+
+###  http://www.w3id.org/dh-atlas/Paper
+:Paper rdf:type owl:NamedIndividual ;
+       rdfs:comment "A document related to a person or other entity or topic (Catalog of Digital Scholarly Editions, Patrick Sahle et al.)."@en ;
+       rdfs:label "Paper"@en .
+
+
+###  http://www.w3id.org/dh-atlas/SerialDocuments
+:SerialDocuments rdf:type owl:NamedIndividual ;
+                 rdfs:comment "Documents of/with similar content and/or form (Catalog of Digital Scholarly Editions, Patrick Sahle et al.)."@en ;
+                 rdfs:label "Serial documents"@en .
+
+
+###  http://www.w3id.org/dh-atlas/SingleManuscript
+:SingleManuscript rdf:type owl:NamedIndividual ;
+                  rdfs:comment "Author manuscript(s) under a single work. Includes multi-volume series (Catalog of Digital Scholarly Editions, Patrick Sahle et al.)."@en ;
+                  rdfs:label "Single manuscript"@en .
+
+
+###  http://www.w3id.org/dh-atlas/SingleWork
+:SingleWork rdf:type owl:NamedIndividual ;
+            rdfs:comment "A specific work with all its expressions, editions, manuscripts (Catalog of Digital Scholarly Editions, Patrick Sahle et al.)."@en ;
+            rdfs:label "Single work"@en .
+
+
+###  http://www.w3id.org/dh-atlas/SynopticEdition
+:SynopticEdition rdf:type owl:NamedIndividual ;
+                 rdfs:comment "An edition which renders the text of two or more manuscripts in parallel columns across one or two pages, or above each other, in horizontal rows, making textual comparison easy for the reader (Parvum lexicon stemmatologicum)."@en ;
+                 rdfs:label "Synoptic edition"@en .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -1,0 +1,14 @@
+Properties,description,expected Type,range Restriction,cardinality,ATLAS,RO-Crate,KNOT,OpenAIRE,SKG IF - Organisations,SKG IF - Grants,IRIS
+M = Mandatory,,,,,https://schema.org/ResearchProject,https://schema.org/Organization,http://www.w3.org/ns/prov#Activity,Project,Organisations (M),Grants (M),8.04 Coordinamento di progetti di ricerca
+,,,,,URI,id,URI,id,local_identifier (M),local_identifier (M),id
+Title (M),The full title of the research project and its abbreviations or aliases.,xsd:String,,1-n,https://schema.org/name,https://schema.org/name,http://purl.org/dc/terms/title,title,name; short_name; other_names,title; acronym,dc.title
+Description (M),Brief text that describes the research project.,xsd:String,,1-n,http://schema.org/description,http://schema.org/description,http://purl.org/dc/terms/description,summary,/,abstract,dc.description.abstracteng
+Country (M),The country where the research project (or its organisations) is located.,URI,Geonames,1-n,https://schema.org/location,/,http://www.w3.org/ns/prov#atLocation,country,country,/,/
+Member,Main research project members.,URI,foaf:Agent[ORCID;catalogue],0-n,http://schema.org/member,http://schema.org/member,http://purl.org/dc/terms/contributor,hasParticipant,/,contributors,dc.contributor
+Funder (M),The funding agency,URI,foaf:Agent[catalogue],1-n,https://schema.org/funder,http://schema.org/funder,http://www.w3.org/ns/prov#wasAssociatedWith,funding; granted; hasParticipant,/,funder; funding streams; currency; funded_amount; benificiaries,dc.iris.importoComplessivoFinanziamento
+Identifier,An identifier of the research project; e.g. the Grant number.,URL,,0-n,http://schema.org/identifier,http://schema.org/identifier,/,callIdentifier,identifiers,identifiers,/
+Same As,Corresponding Entities in Authority Records (VIAF / Wikidata),URI,Wikidata; VIAF,0-n,https://schema.org/sameAs,/,/,/,/,/,/
+StartDate,Start date of the project activity.,xsd:Date,,0-1,https://schema.org/foundingDate,/,http://www.w3.org/ns/prov#startedAtTime,startDate,/,start_date,dc.iris.annoinizioCoordinamento; dc.iris.annoApprovazioneProgetto
+EndDate,End date of the project activity; if available.,xsd:Date,,0-1,https://schema.org/dissolutionDate,/,http://www.w3.org/ns/prov#endedAtTime,endDate,/,end_date,dc.date.issued
+Landing page (M),The website where the research project is presented.,URL,,1,https://schema.org/url,https://schema.org/url,http://xmlns.com/foaf/0.1/homepage,websiteUrl,website,website,/
+Generated (cfr.Research Product A23),,URI,schema:Dataset[catalogue],1-n,inverse of https://schema.org/producer,/,http://www.w3.org/ns/prov#generated,produces,/,/,dc.relation
