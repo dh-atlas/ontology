@@ -1,0 +1,1019 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/dh-atlas/"
+     xml:base="https://w3id.org/dh-atlas/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/dh-atlas/">
+        <owl:versionIRI rdf:resource="https://w3id.org/dh-atlas/2.0"/>
+        <dc:contributor>Alessia Bardi</dc:contributor>
+        <dc:contributor>Angelo Mario Del Grosso</dc:contributor>
+        <dc:contributor>Chiara Martignano</dc:contributor>
+        <dc:contributor>Franz Fischer</dc:contributor>
+        <dc:contributor>Giorgia Rubin</dc:contributor>
+        <dc:contributor>Marina Buzzoni</dc:contributor>
+        <dc:contributor>Riccardo Del Gratta</dc:contributor>
+        <dc:contributor>Roberto Rosselli del Turco</dc:contributor>
+        <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-10-15</dc:created>
+        <dc:creator>Sebastiano Giacomini</dc:creator>
+        <dc:creator>Marilena Daquino</dc:creator>
+        <dc:creator>Francesca Tomasi</dc:creator>
+        <dc:description xml:lang="en">The ATLAS Ontology is an OWL 2 DL ontology, designed to effectively represent scholarly research projects and their outcomes within the Cultural Heritage domain. In particular, it focuses on highlighting the key characteristics of significant types of research products (Text Collection, Digital Scholarly Edition, Linked Open Data, Ontology, Software, Language Model, and 3D Digital Twin), while considering their unique attributes and specifications. In so doing, it seeks to realise the potential of sharing protocols, good practices, guidelines and evaluation frameworks in the humanities.
+
+Built upon a Schema.org backbone, the ATLAS Ontology incorporates both general-purpose and domain-specific ontological standards—such as DCTerms, FaBiO, and Bibframe—by reusing and integrating their terms and types. To ensure greater semantic precision and expressiveness, it also introduces new ATLAS-specific Classes and Properties. This approach enables a higher level of granularity and fosters consistent, meaningful connections between Classes across diverse vocabularies.</dc:description>
+        <dc:rights rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/B11_CCBYNC40"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-06</terms:modified>
+        <rdfs:label>The ATLAS Ontology</rdfs:label>
+        <owl:priorVersion rdf:resource="https://w3id.org/dh-atlas/"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/abstract -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/created"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://id.loc.gov/ontologies/bibframe/accompaniedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://id.loc.gov/ontologies/bibframe/accompaniedBy">
+        <dc:description xml:lang="en">Usage note: in ATLAS, facsimiles of documents or witnesses included in the catalogued edition.</dc:description>
+        <rdfs:comment xml:lang="en">Resource that accompanies the described resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://id.loc.gov/ontologies/bibframe/"/>
+        <rdfs:label xml:lang="en">accompanied by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://id.loc.gov/ontologies/bibframe/associatedResource -->
+
+
+    <owl:ObjectProperty rdf:about="http://id.loc.gov/ontologies/bibframe/associatedResource">
+        <dc:description xml:lang="en">Usage note: in ATLAS, a web resource presenting as digital facsimile the document(s) or witness(es) on which an edition is based.</dc:description>
+        <rdfs:comment xml:lang="en">Associated resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://id.loc.gov/ontologies/bibframe/"/>
+        <rdfs:label xml:lang="en">associated resource</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://id.loc.gov/ontologies/bibframe/expressionOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://id.loc.gov/ontologies/bibframe/expressionOf">
+        <dc:description xml:lang="en">Usage note: in ATLAS, a work that one or more resources in the Dataset are Expression of.</dc:description>
+        <rdfs:comment xml:lang="en">Work or Hub that the described Work or Hub is an expression of; used to connect Works and/or Hubs under LRM/RDA guidelines or similar implementations.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://id.loc.gov/ontologies/bibframe/"/>
+        <rdfs:label xml:lang="en">expression of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontosoft.org/software#hasCodeLocation -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontosoft.org/software#hasCodeLocation">
+        <rdfs:comment xml:lang="en">What is the URL for the code ?</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontosoft.org/software"/>
+        <rdfs:label xml:lang="en">has code location</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontosoft.org/software#hasImplementationLanguage -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontosoft.org/software#hasImplementationLanguage">
+        <rdfs:comment xml:lang="en">What language(s) is the software written in ?</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontosoft.org/software"/>
+        <rdfs:label xml:lang="en">has implementation language</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontosoft.org/software#hasInput -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontosoft.org/software#hasInput">
+        <rdfs:comment xml:lang="en">What input files does the software require ?</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontosoft.org/software"/>
+        <rdfs:label xml:lang="en">has input</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontosoft.org/software#hasOutput -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontosoft.org/software#hasOutput">
+        <rdfs:comment xml:lang="en">What output files does the software produce ?</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontosoft.org/software"/>
+        <rdfs:label xml:lang="en">has output</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/accessRights -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/accessRights">
+        <dc:description xml:lang="en">Usage note: values from external vocabularies and defined terms should be preferred. ATLAS recommends using terms from [Controlled Vocabularies for Repository: Access Rights](https://vocabularies.coar-repositories.org/access_rights/).</dc:description>
+        <rdfs:comment xml:lang="en">Information about who access the resource or an indication of its security status.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en">Access Rights</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/conformsTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/conformsTo">
+        <rdfs:comment xml:lang="en">An established standard to which the described resource conforms.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en">Conforms To</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/references -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/references">
+        <rdfs:comment xml:lang="en">A related resource that is referenced, cited, or otherwise pointed to by the described resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en">References</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/type -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/type">
+        <dc:description xml:lang="en">Usage note: values from external vocabularies and defined terms should be preferred. ATLAS recommends using terms from the [KNOT Taxonomy](http://w3id.org/knot/taxonomy/) to more precisely define the nature of a Dataset.</dc:description>
+        <rdfs:comment xml:lang="en">The nature or genre of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en">Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/about -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/about">
+        <dc:description xml:lang="en">Usage note: values from external vocabularies or defined terms should be preferred.</dc:description>
+        <rdfs:comment xml:lang="en">The subject matter of the content.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">about</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/additionalType -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/additionalType">
+        <dc:description xml:lang="en">Usage note: in ATLAS, the value is a URI-identified RDF class.</dc:description>
+        <rdfs:comment xml:lang="en">An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org style guide.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">additionalType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/applicationCategory -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/applicationCategory">
+        <dc:description xml:lang="en">Usage note: values from external vocabularies or defined terms should be preferred.</dc:description>
+        <rdfs:comment xml:lang="en">Type of software application, e.g. &apos;Game, Multimedia&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">applicationCategory</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/associatedMedia -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/associatedMedia">
+        <rdfs:comment xml:lang="en">A media object that encodes this CreativeWork. This property is a synonym for encoding.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">associatedMedia</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/contributor -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/contributor">
+        <rdfs:comment xml:lang="en">A secondary contributor to the CreativeWork or Event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">contributor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/creativeWorkStatus -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/creativeWorkStatus">
+        <dc:description xml:lang="en">Usage note: values from external vocabularies and defined terms should be preferred. The recommended controlled vocabulary is the [EU Dataset status vocabulary](http://publications.europa.eu/resource/authority/dataset-status)</dc:description>
+        <rdfs:comment xml:lang="en">The status of a creative work in terms of its stage in a lifecycle. Example terms include Incomplete, Draft, Published, Obsolete. Some organizations define a set of terms for the stages of their publication lifecycle.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">creativeWorkStatus</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/creator -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/creator">
+        <rdfs:comment xml:lang="en">The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">creator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/distribution -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/distribution">
+        <rdfs:comment xml:lang="en">A downloadable form of this dataset, at a specific location, in a specific format. This property can be repeated if different variations are available. There is no expectation that different downloadable distributions must contain exactly equivalent information (see also [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution) on this point). Different distributions might include or exclude different subsets of the entire dataset, for example.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">distribution</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/educationalUse -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/educationalUse">
+        <dc:description xml:lang="en">Usage note: values from external vocabularies and defined terms should be preferred. ATLAS recommends using terms from the [TaDiRAH taxonomy](https://vocabs.dariah.eu/tadirah/).</dc:description>
+        <rdfs:comment xml:lang="en">The purpose of a work in the context of education; for example, &apos;assignment&apos;, &apos;group work&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">educationalUse</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/encodingFormat -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/encodingFormat">
+        <dc:description xml:lang="en">Usage note: values from external vocabularies and defined terms should be preferred. ATLAS  recommends using a MIME format from the [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml) or the [EU File Type vocabulary](http://publications.europa.eu/resource/dataset/file-type).</dc:description>
+        <rdfs:comment xml:lang="en">Media type typically expressed using a MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml) and [MDN reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)), e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc.
+In cases where a CreativeWork has several media type representations, encoding can be used to indicate each MediaObject alongside particular encodingFormat information.
+Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">encodingFormat</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/exampleOfWork -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/exampleOfWork">
+        <rdfs:comment xml:lang="en">A creative work that this resource is an example/instance/realization/derivation of.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">exampleOfWork</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/funder -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/funder">
+        <rdfs:comment xml:lang="en">A person or organization that supports (sponsors) something through some kind of financial contribution.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">funder</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/genre -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/genre">
+        <dc:description xml:lang="en">Usage note: values from external vocabularies and defined terms should be preferred. ATLAS recommends using terms from [CWRC Genre Ontology](http://sparql.cwrc.ca/ontologies/genre.html)</dc:description>
+        <rdfs:comment xml:lang="en">Genre of the creative work, broadcast channel or group.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">genre</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/hasPart -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/hasPart">
+        <owl:inverseOf rdf:resource="https://schema.org/isPartOf"/>
+        <rdfs:comment xml:lang="en">Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org"/>
+        <rdfs:label xml:lang="en">hasPart</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/inLanguage -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/inLanguage">
+        <dc:description xml:lang="en">Usage note: values from external vocabularies and defined terms should be preferred. ATLAS recommends using terms from the [EU Language vocabulary](http://publications.europa.eu/resource/authority/language).</dc:description>
+        <rdfs:comment xml:lang="en">The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also availableLanguage.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">inLanguage</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/isBasedOn -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/isBasedOn">
+        <dc:description xml:lang="en">Usage note: in ATLAS, this property connects SoftwareApplication and WebSite instances to resources they are derived from, such as components, libraries, services, or other pre-existing works.</dc:description>
+        <rdfs:comment xml:lang="en">A resource from which this work is derived or from which it is a modification or adaptation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">isBasedOn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/isPartOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/isPartOf">
+        <rdfs:comment xml:lang="en">Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">isPartOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/license -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/license">
+        <dc:description xml:lang="en">Usage note: values from external vocabularies and defined terms should be preferred. ATLAS recommends using terms from the [EU Licence Vocabulary](http://publications.europa.eu/resource/authority/licence).</dc:description>
+        <rdfs:comment xml:lang="en">A license document that applies to this content, typically indicated by URL.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">license</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/location -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/location">
+        <rdfs:comment xml:lang="en">The location of, for example, where an event is happening, where an organization is located, or where an action takes place.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">location</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/member -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/member">
+        <rdfs:comment xml:lang="en">A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">member</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/mentions -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/mentions">
+        <rdfs:comment xml:lang="en">Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">mentions</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/producer -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/producer">
+        <dc:description xml:lang="en">Usage note: in ATLAS, the Research Project responsible for generating the Dataset.</dc:description>
+        <rdfs:comment xml:lang="en">The person or organization who produced the work (e.g. music album, movie, TV/radio series etc.).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">producer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/publisher -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/publisher">
+        <dc:description xml:lang="en">Usage note: the agent responsible for publishing the Dataset.</dc:description>
+        <rdfs:comment xml:lang="en">The publisher of the article in question.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">publisher</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/sameAs -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/sameAs">
+        <rdfs:comment xml:lang="en">URL of a reference Web page that unambiguously indicates the item&apos;s identity. E.g. the URL of the item&apos;s Wikipedia page, Wikidata entry, or official website.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">sameAs</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/spatialCoverage -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/spatialCoverage">
+        <dc:description xml:lang="en">Usage note: the place(s) which are the focus of the text collection&apos;s content.</dc:description>
+        <rdfs:comment xml:lang="en">The spatialCoverage of a CreativeWork indicates the place(s) which are the focus of the content. It is a subproperty of contentLocation intended primarily for more technical and detailed materials. For example with a Dataset, it indicates areas that the dataset describes: a dataset of New York weather would have spatialCoverage which was the place: the state of New York.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">spatialCoverage</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/temporalCoverage -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/temporalCoverage">
+        <dc:description xml:lang="en">Usage note: in ATLAS, relates a text collection to a time period during which its content is applicable, represented as a URI.</dc:description>
+        <rdfs:comment xml:lang="en">The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in [ISO 8601 time interval format](https://en.wikipedia.org/wiki/ISO_8601#Time_intervals). In the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written &quot;2011/2012&quot;). Other forms of content, e.g. ScholarlyArticle, Book, TVSeries or TVEpisode, may indicate their temporalCoverage in broader terms - textually or via well-known URL.
+Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via &quot;1939/1945&quot;.
+ Open-ended date ranges can be written with &quot;..&quot; in place of the end date. For example, &quot;2015-11/..&quot; indicates a range beginning in November 2015 and with no specified final date. This is tentative and might be updated in future when ISO 8601 is officially updated.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">temporalCoverage</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dh-atlas/affiliation -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dh-atlas/affiliation">
+        <rdfs:comment xml:lang="en">An organization that this person is affiliated with. For example, a school/university, a club, or a team.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">affiliation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dh-atlas/editionType -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dh-atlas/editionType">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/type"/>
+        <rdfs:domain rdf:resource="https://w3id.org/dh-atlas/DigitalScholarlyEdition"/>
+        <rdfs:domain rdf:resource="https://w3id.org/dh-atlas/TextCollection"/>
+        <dc:description xml:lang="en">Usage note: values from external vocabularies or defined terms should be preferred. ATLAS recommends using terms from the [Edition Types Vocabulary (ETV)](https://w3id.org/dh-atlas/etv/).</dc:description>
+        <rdfs:comment xml:lang="en">The type of edition that reflects how the editorial team has worked on the text and outlines the main objectives of the Digital Scholarly Edition. </rdfs:comment>
+        <rdfs:label xml:lang="en">edition type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dh-atlas/referencedAuthor -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dh-atlas/referencedAuthor">
+        <rdfs:subPropertyOf rdf:resource="https://schema.org/contributor"/>
+        <rdfs:domain rdf:resource="https://w3id.org/dh-atlas/DigitalScholarlyEdition"/>
+        <rdfs:domain rdf:resource="https://w3id.org/dh-atlas/TextCollection"/>
+        <rdfs:range rdf:resource="https://schema.org/Organization"/>
+        <rdfs:range rdf:resource="https://schema.org/Person"/>
+        <rdfs:comment xml:lang="en">The main author(s) of the edited text(s) .</rdfs:comment>
+        <rdfs:label xml:lang="en">referenced author</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dh-atlas/servedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dh-atlas/servedBy">
+        <rdfs:domain rdf:resource="https://schema.org/Dataset"/>
+        <rdfs:range rdf:resource="https://schema.org/SoftwareApplication"/>
+        <rdfs:range rdf:resource="https://schema.org/WebSite"/>
+        <rdfs:comment xml:lang="en">A data service (API, endpoint), software, or website that provides access to the Dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">served by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dh-atlas/used -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dh-atlas/used">
+        <rdfs:domain rdf:resource="https://schema.org/Dataset"/>
+        <rdfs:range rdf:resource="https://schema.org/Dataset"/>
+        <rdfs:range rdf:resource="https://schema.org/SoftwareApplication"/>
+        <rdfs:comment xml:lang="en">A Dataset or software component that is partially or fully utilized in the creation or realization of the described Dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">used</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dh-atlas/vocabulary -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dh-atlas/vocabulary">
+        <rdfs:domain rdf:resource="https://w3id.org/dh-atlas/LinkedOpenData"/>
+        <rdfs:comment xml:lang="en">A vocabulary or owl:Ontology whose classes or properties are used in a Linked Open Data dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">vocabulary</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3id.org/dh-atlas/methodology -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/dh-atlas/methodology">
+        <rdfs:domain rdf:resource="https://schema.org/Dataset"/>
+        <dc:description xml:lang="en">Usage note: values from external vocabularies and defined terms should be preferred. ATLAS recommends using terms from the [TaDiRAH taxonomy](https://vocabs.dariah.eu/tadirah/).</dc:description>
+        <rdfs:comment xml:lang="en">Research activities performed to realize the research product. </rdfs:comment>
+        <rdfs:label xml:lang="en">methodology</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">The preferred namespace URI to use when using terms from this vocabulary in an XML document.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/vann/"/>
+        <rdfs:label xml:lang="en">Preferred Namespace Uri</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/citation -->
+
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/citation">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">citation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/datePublished -->
+
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/datePublished">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">Date of first publication or broadcast. For example the date a CreativeWork was broadcast or a Certification was issued.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">datePublished</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/description -->
+
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/description">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">A description of the item.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/dissolutionDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/dissolutionDate">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">The date that this organization was dissolved.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">dissolutionDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/foundingDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/foundingDate">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">The date that this organization was founded.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">foundingDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/identifier -->
+
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/identifier">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">Usage note: an unambiguous reference assigned to the resource being registered. This can be any alphanumeric string conforming to a recognized identification system (e.g., ORCiD, DOI, ISBN, ISSN, etc.)</dc:description>
+        <rdfs:comment xml:lang="en">The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/name -->
+
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/name">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">The name of the item.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/size -->
+
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/size">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">A standardized size of a product or creative work, specified either through a simple textual string (for example &apos;XL&apos;, &apos;32Wx34L&apos;), a  QuantitativeValue with a unitCode, or a comprehensive and structured SizeSpecification; in other cases, the width, height, depth and weight properties may be more applicable.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">size</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/url -->
+
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/url">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">URL of the item.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">url</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/usageInfo -->
+
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/usageInfo">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <dc:description xml:lang="en">Usage note: in ATLAS, the URL of a Web page that contains the documentation for the resource.</dc:description>
+        <rdfs:comment xml:lang="en">The schema.org usageInfo property indicates further information about a CreativeWork. This property is applicable both to works that are freely available and to those that require payment or other transactions. It can reference additional information, e.g. community expectations on preferred linking and citation conventions, as well as purchasing details. For something that can be commercially licensed, usageInfo can provide detailed, resource-specific information about licensing options.
+This property can be used alongside the license property which indicates license(s) applicable to some piece of content. The usageInfo property can provide information about other licensing options, e.g. acquiring commercial usage rights for an image that is also available under non-commercial creative commons licenses.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">usageInfo</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/version -->
+
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/version">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">The version of the CreativeWork embodied by a specified resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">version</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/dh-atlas/noteOnResearchProduct -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/dh-atlas/noteOnResearchProduct">
+        <rdfs:subPropertyOf rdf:resource="https://schema.org/description"/>
+        <rdfs:domain rdf:resource="https://schema.org/Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Additional information or comments on the Dataset. Notes may include details on the type of sources and their use.</rdfs:comment>
+        <rdfs:label xml:lang="en">note on research product</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/spar/fabio/Anthology -->
+
+
+    <owl:Class rdf:about="http://purl.org/spar/fabio/Anthology">
+        <rdfs:comment xml:lang="en">A collection of selected literary or scholastics works, for example poems, short stories, plays or research papers.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/fabio"/>
+        <rdfs:label xml:lang="en">Anthology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/fabio/MetadataDocument -->
+
+
+    <owl:Class rdf:about="http://purl.org/spar/fabio/MetadataDocument">
+        <rdfs:comment xml:lang="en">A document that contains metadata information describing one or more characteristics of an entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/fabio"/>
+        <rdfs:label xml:lang="en">Metadata Document</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/fabio/OntologyDocument -->
+
+
+    <owl:Class rdf:about="http://purl.org/spar/fabio/OntologyDocument">
+        <rdfs:comment xml:lang="en">A document containing an ontology, for example an OWL (Web Ontology Language) file (http://www.w3.org/TR/owl-features/).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/fabio"/>
+        <rdfs:label xml:lang="en">Ontology Document</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Dataset -->
+
+
+    <owl:Class rdf:about="https://schema.org/Dataset">
+        <rdfs:comment xml:lang="en">A body of structured information describing some topic(s) of interest.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">Dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Organization -->
+
+
+    <owl:Class rdf:about="https://schema.org/Organization">
+        <rdfs:comment xml:lang="en">An organization such as a school, NGO, corporation, club, etc.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">Organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Person -->
+
+
+    <owl:Class rdf:about="https://schema.org/Person">
+        <rdfs:comment xml:lang="en">A person (alive, dead, undead, or fictional).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/ResearchProject -->
+
+
+    <owl:Class rdf:about="https://schema.org/ResearchProject">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Organization"/>
+        <dc:description xml:lang="en">Usage note: in ATLAS a Research Project is intended as a Research group undertaking some activities that lead to the creation of a Research product.</dc:description>
+        <rdfs:comment xml:lang="en">A Research project.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">ResearchProject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/SoftwareApplication -->
+
+
+    <owl:Class rdf:about="https://schema.org/SoftwareApplication">
+        <rdfs:comment xml:lang="en">A software application.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">SoftwareApplication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/WebSite -->
+
+
+    <owl:Class rdf:about="https://schema.org/WebSite">
+        <rdfs:comment xml:lang="en">A WebSite is a set of related web pages and other items typically served from a single web domain and accessible via URLs.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">WebSite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dh-atlas/DigitalScholarlyEdition -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dh-atlas/DigitalScholarlyEdition">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/fabio/MetadataDocument"/>
+        <rdfs:subClassOf rdf:resource="https://schema.org/Dataset"/>
+        <rdfs:comment xml:lang="en">An information resource which offers a critical representation of documents or texts of literary or historical value following a shared methodology determined by a digital paradigm.</rdfs:comment>
+        <rdfs:label xml:lang="en">Digital Scholarly Edition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dh-atlas/LanguageModel -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dh-atlas/LanguageModel">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Dataset"/>
+        <rdfs:subClassOf rdf:resource="https://schema.org/SoftwareApplication"/>
+        <rdfs:comment xml:lang="en">A machine learning model designed to predict and generate language.</rdfs:comment>
+        <rdfs:label xml:lang="en">Language Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dh-atlas/LinkedOpenData -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dh-atlas/LinkedOpenData">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Dataset"/>
+        <rdfs:comment xml:lang="en">An interlinked, openly accessible set of RDF triples published on the web.</rdfs:comment>
+        <rdfs:label xml:lang="en">Linked Open Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dh-atlas/Ontology -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dh-atlas/Ontology">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/fabio/OntologyDocument"/>
+        <rdfs:subClassOf rdf:resource="https://schema.org/Dataset"/>
+        <rdfs:comment xml:lang="en">A formal model of concepts and their interrelations describing a domain of interest.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ontology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dh-atlas/Software -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dh-atlas/Software">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Dataset"/>
+        <rdfs:subClassOf rdf:resource="https://schema.org/SoftwareApplication"/>
+        <rdfs:comment xml:lang="en">A software entity that implements one or more algorithms to perform specific computational tasks.</rdfs:comment>
+        <rdfs:label xml:lang="en">Software</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dh-atlas/TextCollection -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dh-atlas/TextCollection">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/fabio/Anthology"/>
+        <rdfs:subClassOf rdf:resource="https://schema.org/Dataset"/>
+        <rdfs:comment xml:lang="en">A type of digital archive that focuses on textual heritage, preserving texts digitally and providing web access. Beyond the texts, a text collection typically offers bibliographic metadata and editorial annotations.</rdfs:comment>
+        <rdfs:label xml:lang="en">Text Collection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dh-atlas/3DDigitalTwin -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dh-atlas/3DDigitalTwin">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Dataset"/>
+        <rdfs:comment xml:lang="en">A 3D digital replica of a cultural heritage object (e.g., an artwork, an archaeological site, or a museum environment) allowing cultural operators to explore, preserve, and share Cultural Heritage in innovative ways (Nicolucci and Felicetti 2024)</rdfs:comment>
+        <rdfs:label xml:lang="en">3D Digital Twin</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
