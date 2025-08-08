@@ -1,0 +1,15 @@
+Properties,description,expected Type,range Restriction,cardinality,ATLAS,RO-Crate,KNOT,OpenAIRE,IRIS
+,,,,,https://schema.org/SoftwareApplication,/,http://www.w3.org/ns/dcat#DataService',/,/
+,,,,,URI,/,URI,/,/
+Type,The type of service or software.,URI,EU Vocabularies - Data Service Type,1,https://schema.org/applicationCategory,/,http://purl.org/dc/terms/type,/,/
+Title,The title of the software or data service used to generate; deploy; access; or manipulate the dataset.,xsd:String,,1-n,https://schema.org/name,/,http://purl.org/dc/terms/title,/,/
+Description,A summary of what the software allows users to do.,xsd:String,,1-n,https://schema.org/description,/,http://purl.org/dc/terms/description,/,/
+Access URL,The URL of the service or software to generate; deploy; access; or manipulate the dataset. Do not include the official page of a software.,URL,,1,https://schema.org/url,/,http://www.w3.org/ns/dcat#endpointURL,/,/
+Documentation,The URL of a document describing the operations; parameters etc. with respect to the dataset.,URL,,1-n,https://schema.org/usageInfo,/,http://www.w3.org/ns/dcat#endpointDescription,/,/
+Research Activities ,The type of research activities afforded by the service or software with respect to the dataset.,URI,TaDiRAH,0-n,https://schema.org/educationalUse,/,http://www.w3.org/ns/dcat#theme,/,/
+License,The terms under which the software or service is available.,URL,schema.gov - Licenze,0-n,https://schema.org/license,/,http://purl.org/dc/terms/license,/,/
+Based On,Software component that is reused/extended in the current software. It can be a research product or the URL of the official page of the software.,URI,atlas:Software; URL,0-n,https://schema.org/isBasedOn,/,/,/,/
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
