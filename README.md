@@ -1,5 +1,6 @@
 # The ATLAS Ontology
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14058232.svg)](https://doi.org/10.5281/zenodo.14058232)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16780282.svg)](https://doi.org/10.5281/zenodo.16780282)
+
 
 **Version:** 2.0  
 **Version IRI:** https://www.w3id.org/dh-atlas/2.0  
